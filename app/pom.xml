@@ -65,6 +65,7 @@
                 <version>3.1.0</version>
                 <configuration>
                     <warSourceDirectory>WebContent</warSourceDirectory>
+                    <attachClasses>true</attachClasses>
                 </configuration>
             </plugin>
         </plugins>
