@@ -9,6 +9,7 @@ RUN mvn clean install
 # RUN ./mvnw dependency:resolve
 
 FROM base as development
+ARG MAVEN_CONFIG=
 CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000'"]
 
 FROM base as build
