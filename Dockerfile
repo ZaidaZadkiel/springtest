@@ -13,7 +13,7 @@ ARG MAVEN_CONFIG=
 CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000'"]
 
 FROM base as build
-RUN ./mvnw package
+RUN MAVEN_CONFIG= ./mvnw package
 
 FROM eclipse-temurin:17-jre-jammy as production
 EXPOSE 8080
