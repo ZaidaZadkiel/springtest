@@ -3,7 +3,7 @@ services:
   springtest:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
       target: development
     ports:
       - "8000:8000"
